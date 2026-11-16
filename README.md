@@ -1,18 +1,13 @@
-# Daily Callsheet V2
-Arsitektur: Browser/PWA -> Vercel -> /api/proxy -> Google Apps Script -> Google Sheets / Drive.
+# Daily Callsheet V2 Full
 
-## Struktur
-- api/ : serverless proxy Vercel. Token backend tidak diletakkan di browser.
-- src/ : frontend mobile.
-- public/ : manifest PWA dan service worker.
-- apps-script/ : backend Google Apps Script yang ditambahkan ke project existing.
-- docs/ : dokumentasi/pemetaan.
+Frontend mobile/PWA di Vercel dengan API proxy ke Google Apps Script.
 
-## Deploy ringkas
-1. Upload seluruh folder ini ke repository GitHub.
-2. Import repository tersebut ke Vercel.
-3. Tambahkan APPS_SCRIPT_API_URL dan APPS_SCRIPT_API_TOKEN di Environment Variables Vercel.
-4. Pada Apps Script, tambahkan file dari apps-script/ sebagai file baru dan set Script Property CALLSHEET_API_TOKEN.
-5. Deploy Apps Script backend sebagai Web App lalu masukkan URL /exec ke APPS_SCRIPT_API_URL.
+## Update GitHub
+Upload/replace: `index.html`, `src/`, `public/`, `api/proxy.js`, `vercel.json`, dan `package.json`. Jangan upload `.env` atau token.
 
-V2 ini baru fondasi struktur deployment. UI Callsheet lengkap dari V1 selanjutnya dipindahkan ke src/ tanpa google.script.run.
+## Environment Variables Vercel
+- `APPS_SCRIPT_API_URL`
+- `APPS_SCRIPT_API_TOKEN`
+
+## Backend
+Backend Apps Script existing tetap digunakan: `Callsheet.gs`, `CallsheetAPI.gs`, `CallsheetPDF.html`.

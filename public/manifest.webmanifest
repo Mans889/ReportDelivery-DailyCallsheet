@@ -1,1 +1,10 @@
-{"name":"Daily Callsheet","short_name":"Callsheet","start_url":"/","display":"standalone","background_color":"#06101d","theme_color":"#07111f","icons":[]}
+{
+  "name": "Daily Callsheet",
+  "short_name": "Callsheet",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#06111f",
+  "theme_color": "#06111f",
+  "description": "Daily Callsheet Report Delivery"
+}

@@ -1,15 +1,2 @@
-const CALLSHEET_API_TOKEN = PropertiesService.getScriptProperties().getProperty('CALLSHEET_API_TOKEN');
-function doPost(e) {
-  try {
-    const body = JSON.parse(e.postData.contents || '{}');
-    if (!CALLSHEET_API_TOKEN || body.token !== CALLSHEET_API_TOKEN) return json_({ok:false,message:'Unauthorized'});
-    switch (body.action) {
-      case 'health': return json_({ok:true,service:'Daily Callsheet API'});
-      case 'bootstrap': return json_(getBootstrapData());
-      case 'submit': return json_(submitData(body.payload));
-      case 'status': return json_(getJobStatus(body.payload && body.payload.jobId));
-      default: return json_({ok:false,message:'Action tidak dikenal'});
-    }
-  } catch (err) { return json_({ok:false,message:String(err.message || err)}); }
-}
-function json_(value){ return ContentService.createTextOutput(JSON.stringify(value)).setMimeType(ContentService.MimeType.JSON); }
+const CALLSHEET_API_TOKEN=PropertiesService.getScriptProperties().getProperty('CALLSHEET_API_TOKEN');
+function doGet(){return callsheetJsonResponse_({ok:true,service:'Daily Callsheet API V2',status:'READY'});}function doPost(e){try{const b=JSON.parse((e&&e.postData&&e.postData.contents)||'{}');if(!CALLSHEET_API_TOKEN||b.token!==CALLSHEET_API_TOKEN)return callsheetJsonResponse_({ok:false,message:'Unauthorized'});switch(String(b.action||'').toLowerCase()){case'health':return callsheetJsonResponse_({ok:true,service:'Daily Callsheet API V2',status:'READY'});case'bootstrap':return callsheetJsonResponse_(getBootstrapData());case'submit':return callsheetJsonResponse_(submitData(b.payload));case'status':return callsheetJsonResponse_(getJobStatus(b.payload&&b.payload.jobId));default:return callsheetJsonResponse_({ok:false,message:'Action tidak dikenal'});}}catch(err){return callsheetJsonResponse_({ok:false,message:String(err.message||err)});}}function callsheetJsonResponse_(v){return ContentService.createTextOutput(JSON.stringify(v)).setMimeType(ContentService.MimeType.JSON);}

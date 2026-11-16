@@ -1,13 +1,9 @@
-# Daily Callsheet V2 Full
+# Daily Callsheet V2.2 Semi-3D
 
-Frontend mobile/PWA di Vercel dengan API proxy ke Google Apps Script.
+Paket berisi frontend GitHub/Vercel dan Apps Script yang sudah disesuaikan dengan MASTER-DATA header baris 17, data baris 18, MASTER-TOKO data baris 13.
 
-## Update GitHub
-Upload/replace: `index.html`, `src/`, `public/`, `api/proxy.js`, `vercel.json`, dan `package.json`. Jangan upload `.env` atau token.
+## GitHub
+Upload isi root paket dan replace file lama.
 
-## Environment Variables Vercel
-- `APPS_SCRIPT_API_URL`
-- `APPS_SCRIPT_API_TOKEN`
-
-## Backend
-Backend Apps Script existing tetap digunakan: `Callsheet.gs`, `CallsheetAPI.gs`, `CallsheetPDF.html`.
+## Apps Script
+Replace seluruh isi `Callsheet.gs` dan `CallsheetAPI.gs` menggunakan file di folder `apps-script`. Pertahankan `CallsheetPDF.html`. Setelah save, update deployment ke New version.

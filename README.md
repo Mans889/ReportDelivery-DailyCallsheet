@@ -1,9 +1,4 @@
-# Daily Callsheet V2.3
+# Daily Callsheet V2.4
+Fix preview foto compact, formula HYPERLINK separator `;`, PDF tanpa scriptlet, result spacing, tombol semi-3D dengan pressed color, Jam Masuk readonly, Administrator lock + Autofill Test password 9940, serta perubahan judul.
 
-Perubahan: filter crew/toko per Area, helper Proper Case realtime, input waktu 24 jam custom, Rp sejajar, tombol Upload dan Camera, validasi foto hanya melalui popup, biaya/foto per toko, toko sebelumnya terkunci, dan template PDF diperbaiki.
-
-## GitHub/Vercel
-Upload isi root paket ke repo dan replace file lama.
-
-## Apps Script
-Replace `Callsheet.gs`, `CallsheetAPI.gs`, dan `CallsheetPDF.html` dari folder `apps-script`, lalu Deploy > Manage deployments > Edit > New version.
+Upload root ke GitHub. Replace Callsheet.gs, CallsheetAPI.gs dan CallsheetPDF.html di Apps Script, lalu deploy New version.

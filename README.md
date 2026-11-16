@@ -1,4 +1,5 @@
-# Daily Callsheet V2.4
-Fix preview foto compact, formula HYPERLINK separator `;`, PDF tanpa scriptlet, result spacing, tombol semi-3D dengan pressed color, Jam Masuk readonly, Administrator lock + Autofill Test password 9940, serta perubahan judul.
+# Daily Callsheet V2.6
 
-Upload root ke GitHub. Replace Callsheet.gs, CallsheetAPI.gs dan CallsheetPDF.html di Apps Script, lalu deploy New version.
+Fitur: Job Order multi-ritase, Mutasi per ritase, KM Awal/Akhir + odometer, Show/Download 3D, PDF data pada halaman pertama dan evidence mulai halaman berikutnya, UI konfirmasi baru, font bold compact.
+
+Upload isi root ke GitHub. Replace tiga file di folder apps-script lalu deploy New version.

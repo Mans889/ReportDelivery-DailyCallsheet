@@ -1,18 +1,1 @@
-{
-  "$schema": "https://openapi.vercel.sh/vercel.json",
-  "version": 2,
-  "builds": [
-    {"src":"index.html","use":"@vercel/static"},
-    {"src":"src/**","use":"@vercel/static"},
-    {"src":"public/**","use":"@vercel/static"},
-    {"src":"api/*.js","use":"@vercel/node"}
-  ],
-  "routes": [
-    {"src":"/api/(.*)","dest":"/api/$1.js"},
-    {"src":"/src/(.*)","dest":"/src/$1"},
-    {"src":"/manifest.webmanifest","dest":"/public/manifest.webmanifest"},
-    {"src":"/sw.js","dest":"/public/sw.js"},
-    {"src":"/","dest":"/index.html"},
-    {"src":"/(.*)","dest":"/index.html"}
-  ]
-}
+{"version":2,"builds":[{"src":"index.html","use":"@vercel/static"},{"src":"src/**","use":"@vercel/static"},{"src":"public/**","use":"@vercel/static"},{"src":"api/*.js","use":"@vercel/node"}],"routes":[{"src":"/api/(.*)","dest":"/api/$1.js"},{"src":"/src/(.*)","dest":"/src/$1"},{"src":"/manifest.webmanifest","dest":"/public/manifest.webmanifest"},{"src":"/sw.js","dest":"/public/sw.js"},{"src":"/(.*)","dest":"/index.html"}]}

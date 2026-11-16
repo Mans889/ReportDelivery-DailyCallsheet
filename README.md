@@ -1,9 +1,9 @@
-# Daily Callsheet V2.2 Semi-3D
+# Daily Callsheet V2.3
 
-Paket berisi frontend GitHub/Vercel dan Apps Script yang sudah disesuaikan dengan MASTER-DATA header baris 17, data baris 18, MASTER-TOKO data baris 13.
+Perubahan: filter crew/toko per Area, helper Proper Case realtime, input waktu 24 jam custom, Rp sejajar, tombol Upload dan Camera, validasi foto hanya melalui popup, biaya/foto per toko, toko sebelumnya terkunci, dan template PDF diperbaiki.
 
-## GitHub
-Upload isi root paket dan replace file lama.
+## GitHub/Vercel
+Upload isi root paket ke repo dan replace file lama.
 
 ## Apps Script
-Replace seluruh isi `Callsheet.gs` dan `CallsheetAPI.gs` menggunakan file di folder `apps-script`. Pertahankan `CallsheetPDF.html`. Setelah save, update deployment ke New version.
+Replace `Callsheet.gs`, `CallsheetAPI.gs`, dan `CallsheetPDF.html` dari folder `apps-script`, lalu Deploy > Manage deployments > Edit > New version.

@@ -1,7 +1,6 @@
-# Daily Callsheet V2.8
-- Konfirmasi dan PDF sama-sama detail.
-- Badge step diperkecil untuk HP.
-- Subtitle Slide 2 diperbarui.
-- Tanggal dan JO berdampingan.
-- JO utama dan JO mutasi dipisahkan. JO utama masuk kolom No. Job Order; JO mutasi menggunakan header `No. Job Order Mutasi` bila tersedia.
-- Backend mengekspansi row berdasarkan jumlah Job Order dan menyalin data row terakhir jika perlu. Seluruh perhitungan row dan penulisan tetap berada di dalam ScriptLock untuk mencegah tabrakan antar pengguna.
+# Daily Callsheet V2.9
+- Tombol tambah Job Order menjadi + kecil di samping input JO.
+- Upload odometer diperkecil.
+- Banyak toko dengan hanya satu JO tetap Rit 1. Rit baru hanya bertambah ketika JO baru memang ditambahkan.
+- Konfirmasi dibuat vertikal/rapi khusus Jam dan KM.
+- PDF memakai table-layout fixed serta nowrap untuk Job Order dan nominal agar Rp 0 tidak pecah baris.
